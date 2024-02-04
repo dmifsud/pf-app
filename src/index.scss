@@ -1,0 +1,43 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import 'theme.scss';
+
+body {
+    margin: 0;
+    font-family: 'SF Pro Display', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+// Texts
+
+.primary-header,
+h1 {
+    color: $primary-dark;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.secondary-header,
+h2 {
+    color: $primary-dark;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.paragraph,
+p {
+    color: $secondary-dark;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+// Defaults
+
+.full-width {
+    width: 100%;
+}
