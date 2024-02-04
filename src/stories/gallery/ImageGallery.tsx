@@ -1,10 +1,5 @@
+import { ImageGalleryProps } from './ImageGalleryProps';
 import './image-gallery.scss';
-
-interface ImageGalleryProps {
-    imageUrl: string;
-    title: string;
-    info?: string;
-}
 
 export const ImageGallery = ({ imageUrl, title, info }: ImageGalleryProps) => {
     return (

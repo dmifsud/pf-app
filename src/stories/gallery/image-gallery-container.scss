@@ -1,0 +1,34 @@
+@import '../../theme.scss';
+$gap: 20px;
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+        margin: 0;
+    }
+
+    a,
+    a:visited,
+    a:active {
+        color: $primary;
+        text-decoration: none;
+        size: 14px;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.image-gallery-container {
+    display: flex;
+    gap: $gap;
+}

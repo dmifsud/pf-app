@@ -1,26 +1,36 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
+import { ImageGalleryContainer } from './stories/gallery/ImageGalleryContainer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload. Daveo!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const mockImages = [
+        {
+            imageUrl: 'https://i.ibb.co/hcwLryT/bali-indonesia.jpg',
+            title: 'Bali, Indonesia',
+            info: '345 Rented props',
+        },
+        {
+            imageUrl: 'https://i.ibb.co/vZt1WZS/tokyo-city.jpg',
+            title: 'Tokyo, Japan',
+            info: '123 Rented props',
+        },
+        {
+            imageUrl: 'https://i.ibb.co/mhKDThR/sydney-city.jpg',
+            title: 'Sydney, Australia',
+            info: '456 Rented props',
+        },
+    ];
+
+    return (
+        <div className="App">
+            <ImageGalleryContainer
+                imageGalleryProps={mockImages}
+                title="Just a title"
+                seeAllLink="#test"
+            />
+        </div>
+    );
 }
 
 export default App;
