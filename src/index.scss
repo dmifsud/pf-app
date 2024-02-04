@@ -19,21 +19,37 @@ code {
 h1 {
     color: $primary-dark;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .secondary-header,
 h2 {
     color: $primary-dark;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+h3 {
+    color: $primary-dark;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.paragraph,
+p,
+small {
+    color: $nav-gray;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .paragraph,
 p {
-    color: $secondary-dark;
     font-size: 16px;
-    font-weight: normal;
+}
+
+small {
+    font-size: 13px;
 }
 
 // Defaults
