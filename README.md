@@ -1,6 +1,6 @@
 # Demo
 
-### [Demo](https://dmifsud.github.io/pf-app/dist) link.
+### [Mobile Demo](https://dmifsud.github.io/pf-app/dist) link.
 
 ## Available Scripts
 
