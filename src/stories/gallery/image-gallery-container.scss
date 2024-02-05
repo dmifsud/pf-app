@@ -53,7 +53,9 @@ $gap: 20px;
         overflow-y: hidden;
         padding-top: $gap;
         padding-bottom: 120px; //TODO: mini hack for now to show the drop shadow (requires further investigation)
-
+        &::-webkit-scrollbar {
+            display: none; /* Hide scrollbar */
+        }
         .gallery-container:first-child {
             margin-left: $gap;
         }
