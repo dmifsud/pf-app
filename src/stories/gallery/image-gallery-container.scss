@@ -52,7 +52,7 @@ $gap: 20px;
         overflow-x: auto;
         overflow-y: hidden;
         padding-top: $gap;
-        padding-bottom: 120px; //TODO: mini hack for now to show the drop shadow (requires more investigation)
+        padding-bottom: 120px; //TODO: mini hack for now to show the drop shadow (requires further investigation)
 
         .gallery-container:first-child {
             margin-left: $gap;
