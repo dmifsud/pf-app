@@ -23,11 +23,6 @@ const mockImages = [
         title: 'Tokyo, Japan',
         info: '123 Rented props',
     },
-    {
-        imageUrl: 'https://i.ibb.co/mhKDThR/sydney-city.jpg',
-        title: 'Sydney, Australia',
-        info: '456 Rented props',
-    },
 ];
 
 export const Default: Story = {
@@ -45,8 +40,46 @@ export const WithTitle: Story = {
 
 export const WithTitleAndLink: Story = {
     args: {
-        imageGalleryProps: [mockImages[0], mockImages[1]],
+        imageGalleryProps: mockImages,
         title: 'Find your next trip',
         seeAllLink: '#todo-link',
+    },
+};
+
+export const OddNumber: Story = {
+    args: {
+        imageGalleryProps: [
+            ...mockImages,
+            {
+                imageUrl: 'https://i.ibb.co/mhKDThR/sydney-city.jpg',
+                title: 'Sydney, Australia',
+                info: '456 Rented props',
+            },
+        ],
+        title: 'Find your next trip',
+        seeAllLink: '#todo-link',
+    },
+};
+
+const horizontalImages = [
+    {
+        title: 'Outdoor living',
+        imageUrl: 'https://picsum.photos/600/400.jpg',
+    },
+    {
+        title: 'Online events',
+        imageUrl: 'https://picsum.photos/500/500.jpg',
+    },
+    {
+        title: 'Online events',
+        imageUrl: 'https://picsum.photos/500/500.jpg',
+    },
+];
+
+export const HorizontalExample: Story = {
+    args: {
+        imageGalleryProps: horizontalImages,
+        title: 'Explore by living style',
+        variant: 'horizontal',
     },
 };

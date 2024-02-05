@@ -4,7 +4,6 @@
     border-radius: 10px;
     box-shadow: 0px 24px 96px 0px #43434326;
     width: 100%;
-    min-width: 162px;
 }
 
 .image-container {
@@ -28,8 +27,16 @@
     padding: 16px;
     display: grid;
     gap: 6px;
+    text-align: left;
 
     h3 {
         margin: 0;
+    }
+
+    h3,
+    small {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
 }

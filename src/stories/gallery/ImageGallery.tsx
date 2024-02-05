@@ -1,9 +1,14 @@
 import { ImageGalleryProps } from './ImageGalleryProps';
 import './image-gallery.scss';
 
-export const ImageGallery = ({ imageUrl, title, info }: ImageGalleryProps) => {
+export const ImageGallery = ({
+    imageUrl,
+    title,
+    info,
+    minWidth = '162px',
+}: ImageGalleryProps) => {
     return (
-        <div className="gallery-container">
+        <div className="gallery-container" style={{ minWidth }}>
             <div className="image-container">
                 <img src={imageUrl} />
             </div>
