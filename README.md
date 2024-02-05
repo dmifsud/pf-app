@@ -1,12 +1,12 @@
-# Getting Started with Create React App
+# Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### [Demo](https://dmifsud.github.io/pf-app/dist) link.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,33 +14,39 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+### `yarn storybook`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To visualize and test individually built components
 
-### `npm run build`
+### `yarn build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Summary
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Since this was a timeboxed, prototype like approach to translate and show mocked up designs from Figma to a live demo, certain decisions were taken to speed up the process whilst keeping the project scalable for possible future development.
 
-### `npm run eject`
+1. `create-react-app` was used to easily build a boilerplate project (TypeScript was added to easily identify any issues that crop up during development)
+2. Storybook was added to easily develop and visually test some of the components built prior putting things together.
+3. Scss was used for a quick setup and be able to have certain variables set up such as the color palette
+4. Since for the purposes of this demo, only one page could be attempted in the appriate time, no routing was added and the main App component was kept quite simple, only rendering a component that shows `ExploreGalleries`
+5. Layers were created despite the small scope of the project.
+    - Api layer was added to handle api calls and return the appropriate response, including the Type
+    - DTOs were added for better use and maintenance of the project
+    - An app component layer was added for components that are specific to the project and business scope. The purpose of these components are to gather the required data (in this case fetch from the api layer), and pass it on to the basic UI components (storybook components).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Issues encountered
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Aside from some minor hickups during initial setup of the project, two main issues still remain untackled unfortunately.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   An issue was noticed later on that when a horizontal scroll is applied to some of the gallery images, the drop shadow of the images was "hidden" due to the overflow applied. An issue like this would need to be discussed to find the most cost effective way of handling it from a project/business/technical and design point of view.
+-   A fallback for demonstration purposes was added for the API calls due to CORS.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Future improvements
 
-## Learn More
+If the project were to proceed, these are some of the things that would be needed to improve quality and scalability
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. State management (e.g. Redux)
+2. Routing for pages
+3. Unit tests for components and services
+4. Stricter linting
